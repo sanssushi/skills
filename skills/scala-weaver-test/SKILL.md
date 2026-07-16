@@ -1,6 +1,9 @@
 ---
 name: scala-weaver-test
+author: sanssushi
 description: Use when writing or modifying Scala 3 tests with weaver-cats, weaver-discipline, or weaver-scalacheck; covers suites, effects, expectations, resources, and laws
+tags: ["scala", "testing"]
+license: MIT
 ---
 
 # Weaver for Scala 3
