@@ -1,8 +1,7 @@
 # sbt2-cli
 
 Practical reference for the **sbt 2.x command line** — the `sbt` runner, the
-interactive shell, and task invocation syntax. Validated against **sbt 2.0.3**
-on a small multi-project build. Covers the CLI only; `build.sbt` DSL and
+interactive shell, and task invocation syntax. Covers the CLI only; `build.sbt` DSL and
 plugin migration are out of scope (official guides linked instead).
 
 ## Main changes vs sbt 1.x

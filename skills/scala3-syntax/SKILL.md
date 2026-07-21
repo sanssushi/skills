@@ -4,18 +4,9 @@ author: sanssushi
 description: >
   Reference for writing valid Scala 3 code under a strict language
   profile (Scala 3.8, -source:future, -preview, -language:strictEquality,
-  -Yexplicit-nulls). Use whenever writing or reviewing new Scala 3 source: enums
-  and ADTs, given/using/context bounds (SIP-64 new syntax), opaque/match/union
-  types, named tuples (SIP-58), strict (multiversal) equality and CanEqual,
-  explicit nulls, extension methods, export clauses, control/indentation
-  syntax, fewer braces (SIP-44), clause interleaving (SIP-47), `into`
-  conversions (SIP-71), inline/compiletime metaprogramming, and compiler-flag
-  pitfalls. Trigger on: "Scala 3 syntax", enum vs sealed trait, given/using,
-  context bound, CanEqual / strictEquality, SIP-64, SIP-58, SIP-44, SIP-47,
-  SIP-71, opaque type, match type, type lambda, explicit null, boundary/break,
-  -source:future, -Wvalue-discard. Use ONLY for the Scala 3 *language itself*,
-  NOT for 3rd party libraries. Consult this skill before
-  emitting Scala 3 code — older training data routinely produces syntax that is
+  -Yexplicit-nulls). Use whenever writing or reviewing new Scala 3 source.
+  Use ONLY for the Scala 3 *language itself*, NOT for 3rd party libraries.
+  Consult this skill before emitting Scala 3 code — older training data routinely produces syntax that is
   deprecated or warned off under -source:future.
 tags: ["scala"]
 license: MIT

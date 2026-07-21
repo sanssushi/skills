@@ -3,21 +3,8 @@ name: sbt2-cli
 author: sanssushi
 description: >
   Practical reference for the sbt 2.x command line (runner, interactive shell,
-  task invocation), validated against sbt 2.0.3. Use whenever
-  running, scripting, or debugging `sbt` commands on sbt 2.x builds: quoted
-  command sequences (`sbt "clean ; compile ; test"` — bare
-  `sbt clean compile test` fails with "Expected whitespace character"),
-  incremental/cached `test` vs `testFull` (old `testQuick` is now `test`),
-  `testOnly` failing on unmatched patterns, sbtn thin client + background
-  server (`shutdown`, env-var persistence, instant no-op compiles from disk
-  cache), client-side run/console, mandatory slash syntax (`Test/compile`,
-  not `test:compile`), sbt query (`foo.../test`,
-  `...@scalaBinaryVersion=3/test`), unified `target/out` layout, auto-reload,
-  and CI recipes. Trigger on: "sbt 2", "sbt 2.x", "sbt clean compile",
-  "Expected whitespace character", "testFull", "testQuick", "sbtn",
-  "thin client", "sbt compile does nothing", "cache hit", "target/out",
-  "sbt test not running tests". Covers the CLI only — for build.sbt DSL or
-  plugin migration, defer to the linked official guides.
+  task invocation). Use whenever running, scripting, or debugging `sbt` commands on sbt 2.x builds.
+  Covers the CLI only — for build.sbt DSL or plugin migration, defer to the linked official guides.
 tags: ["scala", "sbt", "build"]
 license: MIT
 ---
@@ -25,9 +12,7 @@ license: MIT
 # sbt 2.x CLI Skill
 
 Covers **driving sbt 2.x from the command line**: the `sbt` runner, the
-interactive shell, and task invocation syntax. Behavioral claims were checked
-against sbt 2.0.3 on a small multi-project build (root + 2 subprojects, munit
-suites).
+interactive shell, and task invocation syntax.
 
 **Frame of reference:** sbt 2.x as it behaves today. sbt 1.x habits —
 `sbt clean compile test`, `test` running everything, `testQuick` for
