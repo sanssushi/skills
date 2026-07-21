@@ -16,7 +16,7 @@ Guidance for writing and modifying Scala 3 tests with [Weaver](https://typelevel
 
 ### scala3-syntax
 
-Authoritative reference for writing valid **modern Scala 3** code under a strict compiler profile (Scala 3.8.x, `-source:future`, `-preview`, `-language:strictEquality`, `-Yexplicit-nulls`). Covers enums/ADTs, `given`/`using`/context bounds (SIP-64 new syntax), union/match/opaque/`into` types, named tuples (SIP-58), strict `CanEqual` equality, explicit nulls, extension methods, `export`, fewer braces (SIP-44), clause interleaving (SIP-47), `inline`/`compiletime` metaprogramming, and the warning → fix table for the strict flag profile.
+Reference for writing valid **modern Scala 3** code under a strict compiler profile (Scala 3.8.x, `-source:future`, `-preview`, `-language:strictEquality`, `-Yexplicit-nulls`). Covers enums/ADTs, `given`/`using`/context bounds (SIP-64 new syntax), union/match/opaque/`into` types, named tuples (SIP-58), strict `CanEqual` equality, explicit nulls, extension methods, `export`, fewer braces (SIP-44), clause interleaving (SIP-47), `inline`/`compiletime` metaprogramming, and the warning → fix table for the strict flag profile.
 
 **Use when:**
 - Writing or reviewing any new Scala 3 source file
@@ -27,6 +27,19 @@ Authoritative reference for writing valid **modern Scala 3** code under a strict
 - Triaging `-Wunused` / `-Wvalue-discard` / `-Wnonunit-statement` warnings
 
 > Covers the **Scala 3 language itself**, not 3rd-party libraries.
+
+### sbt2-cli
+
+Practical reference for the **sbt 2.x command line** (runner, interactive shell, task invocation), validated against sbt 2.0.3. Covers quoted command sequences (`sbt "clean ; compile ; test"`), incremental/cached `test` vs `testFull`, `testOnly` semantics, sbtn thin client + background server lifecycle, client-side `run`/`console`, mandatory slash syntax, sbt query, unified `target/out` layout, machine-wide caching, and CI recipes.
+
+**Use when:**
+- Running, scripting, or debugging `sbt` commands on an sbt 2.x build
+- `sbt clean compile test` fails with `Expected whitespace character`
+- `sbt compile` returns instantly and looks like it did nothing (thin client + disk cache)
+- Tests don't run or don't re-run (`test` is now incremental; `clean` doesn't reset it)
+- Writing CI pipelines for sbt 2.x (quoting, `shutdown`, env persistence, report paths)
+
+> Covers the **CLI only** — `build.sbt` DSL and plugin migration defer to the official guides.
 
 ## Installation
 
@@ -41,6 +54,7 @@ Install a specific skill:
 ```bash
 npx skills add sanssushi/skills --skill scala-weaver-test
 npx skills add sanssushi/skills --skill scala3-syntax
+npx skills add sanssushi/skills --skill sbt2-cli
 ```
 
 Install globally (available across all projects):
@@ -85,6 +99,11 @@ Example triggers:
   - "Why is my `==` comparison failing under strict equality?"
   - "Convert this Scala 2 ADT to Scala 3 enum syntax"
   - "How do I write a context bound with the new SIP-64 syntax?"
+- `sbt2-cli`:
+  - "Why does `sbt clean compile test` fail with 'Expected whitespace character'?"
+  - "`sbt test` didn't run my tests after migrating to sbt 2"
+  - "Force one test suite to run on sbt 2.x"
+  - "Update our CI pipeline for sbt 2.x"
 
 ## Skill Structure
 
@@ -102,6 +121,13 @@ skills/
       adts-and-deriving.md
       compiler-flags.md
       ...
+  sbt2-cli/
+    SKILL.md
+    README.md
+    references/
+      commands.md
+      client-server.md
+      caching-and-ci.md
 ```
 
 See the [Agent Skills specification](https://agentskills.io/) for the full format.
