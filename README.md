@@ -30,7 +30,7 @@ Reference for writing valid **modern Scala 3** code under a strict compiler prof
 
 ### sbt2-cli
 
-Practical reference for the **sbt 2.x command line** (runner, interactive shell, task invocation), validated against sbt 2.0.3. Covers quoted command sequences (`sbt "clean ; compile ; test"`), incremental/cached `test` vs `testFull`, `testOnly` semantics, sbtn thin client + background server lifecycle, client-side `run`/`console`, mandatory slash syntax, sbt query, unified `target/out` layout, machine-wide caching, and CI recipes.
+Practical reference for the **sbt 2.x command line** (runner, interactive shell, task invocation). Covers quoted command sequences (`sbt "clean ; compile ; test"`), incremental/cached `test` vs `testFull`, `testOnly` semantics, sbtn thin client + background server lifecycle, client-side `run`/`console`, mandatory slash syntax, sbt query, unified `target/out` layout, machine-wide caching, and CI recipes.
 
 **Use when:**
 - Running, scripting, or debugging `sbt` commands on an sbt 2.x build

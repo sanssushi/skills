@@ -1,4 +1,4 @@
-# sbt 2.x commands (validated against sbt 2.0.3)
+# sbt 2.x commands
 
 Command-level behavior of the `sbt` CLI. Examples are real outputs from a
 multi-project build (`root` aggregating `foo` and `bar`).
@@ -135,8 +135,7 @@ This makes typos in CI fail loudly instead of passing silently. `testOnly`
 also supports `...` as a wildcard pattern.
 
 Unlike filtered `test`, **`testOnly` is a force-run**: it executes the matched
-suites even when their success is cached (validated: a green suite re-ran via
-`testOnly foo.FooSuite`). This is the way to run one specific suite *now*
+suites even when their success is cached. This is the way to run one specific suite *now*
 without touching code. `testFull`, by contrast, takes no filters —
 `sbt "testFull *Foo*"` is a parse error.
 

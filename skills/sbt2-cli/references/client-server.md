@@ -1,4 +1,4 @@
-# sbt 2.x runner / sbtn / server (validated against sbt 2.0.3)
+# sbt 2.x runner / sbtn / server
 
 Why `sbt compile` returns instantly, why env vars "stick" across invocations,
 and how to control the background server.

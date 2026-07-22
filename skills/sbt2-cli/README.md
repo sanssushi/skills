@@ -2,7 +2,7 @@
 
 Practical reference for the **sbt 2.x command line** — the `sbt` runner, the
 interactive shell, and task invocation syntax. Covers the CLI only; `build.sbt` DSL and
-plugin migration are out of scope (official guides linked instead).
+plugin migration are out of scope (official guides linked instead). Validated against sbt 2.0.3 with Scala 3.8.4.
 
 ## Main changes vs sbt 1.x
 

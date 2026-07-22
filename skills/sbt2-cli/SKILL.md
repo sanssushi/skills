@@ -12,7 +12,7 @@ license: MIT
 # sbt 2.x CLI Skill
 
 Covers **driving sbt 2.x from the command line**: the `sbt` runner, the
-interactive shell, and task invocation syntax.
+interactive shell, and task invocation syntax. 
 
 **Frame of reference:** sbt 2.x as it behaves today. sbt 1.x habits —
 `sbt clean compile test`, `test` running everything, `testQuick` for

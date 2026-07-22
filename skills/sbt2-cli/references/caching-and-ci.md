@@ -1,4 +1,4 @@
-# sbt 2.x caching, output layout, and CI (validated against sbt 2.0.3)
+# sbt 2.x caching, output layout, and CI
 
 ## All tasks are cached by default
 
@@ -51,8 +51,7 @@ already passed. Practical rules:
 
 - **To force re-running green tests: `testFull`.** Not `clean`.
 - **To force one suite right now: `testOnly <pattern>`** — it bypasses the
-  incremental cache and runs the selected suites unconditionally (validated:
-  a cached-green suite re-ran via `testOnly foo.FooSuite`). Note
+  incremental cache and runs the selected suites unconditionally. Note
   `test <filter>` is NOT a force-run — it still respects the cache, and
   `testFull` accepts no filters (`testFull *Foo*` is a parse error).
 - Failed suites re-run automatically on the next `test`.
@@ -73,8 +72,7 @@ target/out/jvm/scala-3.8.4/<subproject>/test-reports/TEST-*.xml
 - One `target/` at the build root; subproject/platform/Scala-version encoded
   in the path. There is **no** `foo/target/` anymore.
 - JUnit XML reports for CI artifact upload:
-  `target/out/**/test-reports/*.xml` (validated path shape:
-  `target/out/jvm/scala-3.8.4/bar/test-reports/TEST-bar.BarSuite.xml`).
+  `target/out/**/test-reports/*.xml`.
 
 ### Global directories
 
